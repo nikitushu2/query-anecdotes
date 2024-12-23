@@ -1,4 +1,4 @@
-const AnecdoteForm = () => {
+const AnecdoteForm = ({fn}) => {
 
   const onCreate = (event) => {
     event.preventDefault()
@@ -10,7 +10,7 @@ const AnecdoteForm = () => {
   return (
     <div>
       <h3>create new</h3>
-      <form onSubmit={onCreate}>
+      <form onSubmit={fn}>
         <input name='anecdote' />
         <button type="submit">create</button>
       </form>
